@@ -3,164 +3,237 @@ import {
   TrendingUp,
   Users,
   Calendar,
-  BarChart3,
   Zap,
 } from 'lucide-react';
+import { BsTwitterX } from 'react-icons/bs';
+import { FaInstagram } from 'react-icons/fa';
 
 const App = () => {
   return (
     <div className='min-h-screen bg-gray-50 p-4 md:p-8'>
       <div className='max-w-7xl mx-auto'>
-        <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-4 auto-rows-fr'>
+        <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-8 '>
           {/* Create and schedule content */}
-          <div className='bg-orange-100 rounded-2xl p-6 flex flex-col justify-between row-span-1 h-[130%]'>
+          <div className='bg-orange-100 rounded-2xl p-6 flex flex-col justify-between row-span-1 lg:h-[115%]'>
             <div>
-              <h3 className='text-lg font-semibold text-gray-800 mb-2'>
-                Create and schedule content quickly
+              <h3 className='lg:text-5xl text-3xl leading-14 font-bold text-gray-800 mb-2'>
+                Create and schedule content{' '}
+                <span className='text-purple-600'>quickly</span>
               </h3>
-              <div className='flex items-center gap-2 text-sm text-gray-600 mb-4'>
-                <span>Schedule Post</span>
+              <div className='flex items-center justify-center mt-9 gap-2 text-xl font-semibold text-[#8663AE] bg-[#FFCD66] py-4 px-5 rounded-full w-fit mx-auto'>
+                <span>Create Post</span>
                 <Zap className='w-4 h-4' />
-              </div>
-            </div>
-            <div className='flex justify-end'>
-              <div className='w-8 h-8 bg-orange-200 rounded-full flex items-center justify-center'>
-                <span className='text-orange-600'>→</span>
               </div>
             </div>
           </div>
 
           {/* Social Media 10x Faster */}
-          <div className='bg-purple-600 rounded-2xl p-6 text-white lg:col-span-2'>
-            <h2 className='text-2xl font-bold mb-2'>Social Media 10x</h2>
-            <h2 className='text-2xl font-bold mb-4'>Faster with AI</h2>
-            <div className='flex items-center gap-1 mb-4'>
+          <div className='bg-purple-600 rounded-2xl px-6 text-white lg:col-span-2 py-16'>
+            <h2 className='lg:text-6xl text-3xl font-bold mb-2 text-center'>
+              Social Media <span className='text-[#F8CC86]'>10x</span>
+            </h2>
+            <h2 className='lg:text-6xl text-3xl font-bold mb-4 text-center'>
+              Faster with AI
+            </h2>
+            <div className='flex mt-6 md:mt-10 justify-center items-center gap-1 mb-4'>
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
-                  className='w-4 h-4 fill-yellow-400 text-yellow-400'
+                  className='w-6 h-6 fill-yellow-400 text-yellow-400'
                 />
               ))}
             </div>
-            <p className='text-purple-100 text-sm'>
-              Create engaging content with AI assistance
+            <p className='text-purple-100 font-semibold text-center'>
+              Over 4000 5-star reviews
             </p>
           </div>
 
           {/* Schedule to social media */}
-          <div className='bg-pink-100 rounded-2xl p-6 row-span-2'>
-            <h3 className='text-lg font-semibold text-gray-800 mb-4'>
-              Schedule to social media
+          <div className='bg-[#DCD1FC] rounded-2xl  row-span-2'>
+            <h3 className='text-3xl px-12 py-6 font-semibold text-gray-800'>
+              Schedule to social media.
             </h3>
-            <div className='space-y-2 mb-4'>
-              <div className='text-sm text-gray-600'>Best Time to Post</div>
-              <div className='flex items-center gap-2'>
-                <div className='w-2 h-2 bg-green-500 rounded-full'></div>
-                <span className='text-sm'>Now</span>
+            <div className='bg-white rounded-l-lg p-3 ml-12 lg:my-8'>
+              <div className='font-semibold text-[rgb(69,72,80)]'>
+                Best Time to Post
+              </div>
+              <hr className='text-gray-300 my-3' />
+              <div className='flex gap-3'>
+                <div className='flex flex-col items-center justify-between'>
+                  <h5 className='text-sm text-[#EF758D] px-2 py-1 bg-[#FCE3E4] font-semibold border border-[#EF758D] rounded-full'>
+                    Mon
+                  </h5>
+                  <div className='w-3 h-22 bg-purple-600 rounded-full'></div>
+                </div>
+                <div className='flex flex-col items-center justify-between'>
+                  <h5 className='text-sm text-[#DDD] font-semibold'>Tue</h5>
+                  <div className='w-3 h-28 bg-purple-600 rounded-full'></div>
+                </div>
+                <div className='flex flex-col items-center justify-between gap-2'>
+                  <h5 className='text-sm text-[#DDD] font-semibold'>Wed</h5>
+                  <div className='w-3 h-44 bg-purple-600 rounded-full'></div>
+                </div>
+                <div className='flex flex-col items-center justify-between'>
+                  <h5 className='text-sm text-[#DDD] font-semibold'>Thu</h5>
+                  <div className='w-3 h-32 bg-purple-600 rounded-full'></div>
+                </div>
+                <div className='flex flex-col items-center justify-between'>
+                  <h5 className='text-sm text-[#DDD] font-semibold'>Fri</h5>
+                  <div className='w-3 h-28 bg-purple-600 rounded-full'></div>
+                </div>
+                <div className='flex flex-col items-center justify-between'>
+                  <h5 className='text-sm text-[#DDD] font-semibold'>Sat</h5>
+                  <div className='w-3 h-30 bg-purple-600 rounded-full'></div>
+                </div>
               </div>
             </div>
-            <div className='bg-white rounded-lg p-3'>
-              <BarChart3 className='w-8 h-8 text-purple-600 mb-2' />
-              <div className='flex justify-between items-end'>
-                <div className='w-2 h-8 bg-purple-200 rounded'></div>
-                <div className='w-2 h-12 bg-purple-400 rounded'></div>
-                <div className='w-2 h-6 bg-purple-200 rounded'></div>
-                <div className='w-2 h-10 bg-purple-600 rounded'></div>
-              </div>
+
+            <div className='pl-12 pb-6 pr-6 mt-4 text-gray-700'>
+              <p className='font-semibold text-[#7853DB]'>
+                Optimize post timings to publish content at the perfect time for
+                your audience.
+              </p>
             </div>
           </div>
 
           {/* Write your content using AI */}
-          <div className='bg-yellow-200 rounded-2xl p-6 md:row-span-2 mt-16'>
-            <h3 className='text-lg font-semibold text-gray-800 mb-4'>
+          <div className='bg-yellow-200 rounded-2xl p-8 md:row-span-2 lg:mt-16'>
+            <h3 className='text-3xl font-semibold text-gray-800 mb-4 max-w-44'>
               Write your content using AI
             </h3>
-            <div className='bg-white rounded-lg p-4 mb-4'>
-              <div className='flex items-center gap-2 mb-2'>
-                <div className='w-6 h-6 bg-orange-200 rounded-full'></div>
-                <span className='text-sm font-medium'>Content Ideas</span>
+            <figure className=' mt-8'>
+              <img
+                src='../ai.png'
+                className='object-cover w-full rounded-xl'
+                alt=''
+              />
+            </figure>
+          </div>
+
+          <div className='bg-white rounded-2xl p-6'>
+            <div className='flex items-center overflow-clip gap-3'>
+              <div className='flex items-center gap-4 mb-6 bg-gray-200 border-gray-400 border rounded-full w-fit px-4 py-2'>
+                <div className='bg-[#FFCC69] p-1 rounded-lg'>
+                  <FaInstagram className='w-6 h-6 text-purple-600 ' />
+                </div>
+                <div className='flex flex-col'>
+                  <span className='font-semibold'>@hamim742</span>
+                  <span className='text-sm'>12k Followers</span>
+                </div>
               </div>
-              <p className='text-xs text-gray-600 mb-3'>
-                Generate creative posts for your audience with AI assistance
-              </p>
-              <div className='space-y-2'>
-                <div className='w-full h-2 bg-gray-100 rounded'></div>
-                <div className='w-3/4 h-2 bg-gray-100 rounded'></div>
-                <div className='w-1/2 h-2 bg-gray-100 rounded'></div>
+              <div className='flex items-center gap-4 mb-6 bg-gray-200 border-gray-400 border rounded-full w-full px-4 py-2'>
+                <div className='bg-[#FFCC69] p-1 rounded-lg'>
+                  <BsTwitterX className='w-6 h-6 text-purple-600 ' />
+                </div>
+                <div className='flex flex-col'>
+                  <span className='font-semibold'>@hamim742</span>
+                  <span className='text-sm'>8.5k Followers</span>
+                </div>
               </div>
             </div>
-            <div className='flex justify-end'>
-              <div className='w-8 h-8 bg-yellow-300 rounded-full flex items-center justify-center'>
-                <span className='text-yellow-700'>✨</span>
+            <h2 className='text-3xl font-semibold text-gray-800 mb-4 max-w-44'>
+              Manage multiple accounts and platforms.
+            </h2>
+          </div>
+
+          {/* Maintain consistent posting */}
+          <div className='bg-[#FFCC69] rounded-2xl pl-6 pt-6 pr-6'>
+            <h3 className='text-3xl max-w-44 font-semibold text-gray-800 mb-4'>
+              Maintain a consistent posting schedule
+            </h3>
+            <div>
+              <div className='flex items-center gap-2 bg-[#734CD7] justify-between p-4 rounded-t-xl text-white'>
+                <div className='flex gap-2 items-center '>
+                  <Calendar className='w-5 h-5 text-orange-600' />
+                  <p className='font-semibold'>
+                    {new Date().toLocaleDateString('en-US', {
+                      month: 'short',
+                      day: 'numeric',
+                      year: 'numeric',
+                    })}
+                  </p>
+                </div>
+                <p className='font-semibold'>
+                  {new Date().toLocaleDateString('en-US', { weekday: 'long' })}
+                </p>
+              </div>
+              <div className='flex justify-between items-center bg-white p-6'>
+                <div className='w-4 h-4 bg-purple-400 rounded-full'></div>
+                <div className='w-4 h-4 bg-purple-600 rounded-full'></div>
+                <div className='w-4 h-4 bg-purple-400 rounded-full'></div>
+                <div className='w-4 h-4 bg-purple-600 rounded-full'></div>
+                <div className='w-4 h-4 bg-purple-400 rounded-full'></div>
+
+                <div className='w-4 h-4 bg-purple-600 rounded-full'></div>
+                <div className='w-4 h-4 bg-purple-400 rounded-full'></div>
               </div>
             </div>
           </div>
 
           {/* Manage multiple accounts */}
           <div className='bg-gray-100 rounded-2xl p-6'>
-            <h3 className='text-lg font-semibold text-gray-800 mb-4'>
-              Manage multiple accounts and platforms
-            </h3>
+            <div className='text-7xl font-bold text-gray-800'> {'>'}56%</div>
+            <div className='font-semibold my-3 text-xl text-gray-600'>
+              faster audience growth
+            </div>
             <div className='flex items-center gap-2 mb-4'>
               <div className='flex -space-x-2'>
-                <div className='w-8 h-8 bg-blue-500 rounded-full border-2 border-white'></div>
-                <div className='w-8 h-8 bg-pink-500 rounded-full border-2 border-white'></div>
-                <div className='w-8 h-8 bg-green-500 rounded-full border-2 border-white'></div>
-              </div>
-            </div>
-            <div className='text-2xl font-bold text-gray-800'>+56%</div>
-            <div className='text-sm text-gray-600'>Engagement increase</div>
-          </div>
-
-          {/* Maintain consistent posting */}
-          <div className='bg-orange-200 rounded-2xl p-6'>
-            <h3 className='text-lg font-semibold text-gray-800 mb-4'>
-              Maintain a consistent posting schedule
-            </h3>
-            <div className='flex items-center gap-2 mb-4'>
-              <Calendar className='w-5 h-5 text-orange-600' />
-              <span className='text-sm text-gray-600'>Daily Schedule</span>
-            </div>
-            <div className='flex justify-between items-center'>
-              <div className='flex gap-1'>
-                <div className='w-2 h-2 bg-purple-400 rounded-full'></div>
-                <div className='w-2 h-2 bg-purple-600 rounded-full'></div>
-                <div className='w-2 h-2 bg-purple-400 rounded-full'></div>
-              </div>
-            </div>
-          </div>
-
-          {/* Analytics */}
-          <div className='bg-blue-100 rounded-2xl p-6'>
-            <div className='text-2xl font-bold text-gray-800 mb-2'>20642</div>
-            <div className='text-sm text-gray-600 mb-4'>Total Reach</div>
-            <div className='bg-white rounded-lg p-3'>
-              <div className='flex justify-between items-end h-16'>
-                <div className='w-3 h-8 bg-blue-300 rounded'></div>
-                <div className='w-3 h-12 bg-blue-500 rounded'></div>
-                <div className='w-3 h-6 bg-blue-300 rounded'></div>
-                <div className='w-3 h-10 bg-blue-600 rounded'></div>
-                <div className='w-3 h-14 bg-blue-500 rounded'></div>
+                <div className='w-16 h-16 bg-blue-500 rounded-full border-2 border-white'></div>
+                <div className='w-16 h-16 bg-pink-500 rounded-full border-2 border-white'></div>
+                <div className='w-16 h-16 bg-green-500 rounded-full border-2 border-white'></div>
               </div>
             </div>
           </div>
 
           {/* Grow followers */}
-          <div className='bg-purple-100 rounded-2xl p-6 col-span-2'>
-            <h3 className='text-lg font-semibold text-gray-800 mb-2'>
-              Grow followers with quality content
-            </h3>
-            <div className='flex items-center gap-2 mb-4'>
-              <Users className='w-5 h-5 text-purple-600' />
-              <TrendingUp className='w-5 h-5 text-green-500' />
+          <div className='bg-[#7751DC] rounded-2xl p-6 lg:col-span-2 flex gap-8 items-center lg:justify-between flex-col lg:flex-row'>
+            <div className='relative pb-4'>
+              <div className='bg-white  w-fit rounded-lg p-4'>
+                <h4 className='font-semibold text-gray-600 mb-2'>
+                  Followers Growth
+                </h4>
+                <div className='flex gap-3 items-center justify-between md:px-4'>
+                  <h3 className='text-2xl font-bold text-gray-800'>20,642</h3>
+                  <h5 className='text-green-600 font-semibold text-sm bg-green-100 rounded-full p-1'>
+                    +4.8%
+                  </h5>
+                </div>
+                <div className='flex items-end gap-4'>
+                  <div className='w-4 h-16 bg-purple-600 rounded-full'></div>
+                  <div className='w-4 h-18 bg-purple-600 rounded-full'></div>
+                  <div className='w-4 h-18 bg-purple-600 rounded-full'></div>
+                  <div className='w-4 h-22 bg-purple-600 rounded-full'></div>
+                  <div className='w-4 h-20 bg-purple-600 rounded-full'></div>
+
+                  <div className='w-4 h-24 bg-purple-600 rounded-full'></div>
+
+                  <div className='w-4 h-28 bg-purple-600 rounded-full'></div>
+                </div>
+              </div>
+              <div className='bg-white flex items-center gap-4  rounded-full p-2 w-fit left-16 top-40 absolute shadow-lg'>
+                <div className='flex items-center gap-2 mb-4'>
+                  <Users className='w-5 h-5 text-purple-600' />
+                  <TrendingUp className='w-5 h-5 text-green-500' />
+                </div>
+                <div>
+                  <span className='text-sm text-gray-600 font-semibold'>
+                    Followers
+                  </span>
+                  <div className='flex items-center gap-2'>
+                    <span className='text-2xl font-bold text-gray-800'>
+                      89,932
+                    </span>
+                    <span className='text-green-600 font-semibold text-sm bg-green-100 rounded-full p-1'>
+                      +4.8%
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className='bg-white rounded-lg p-3'>
-              <div className='text-sm text-gray-600 mb-2'>
-                Optimize post timings
-              </div>
-              <div className='text-xs text-gray-500'>
-                AI analyzes the best times to post for maximum engagement
-              </div>
+            <div>
+              <h3 className='text-4xl font-bold max-w-64 text-white mb-2'>
+                Grow followers with non-stop content
+              </h3>
             </div>
           </div>
         </div>
